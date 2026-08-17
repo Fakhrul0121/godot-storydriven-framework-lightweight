@@ -1,0 +1,33 @@
+{
+	"1": {
+		"command_name": "if_command",
+		"data":{
+			"next": "2",
+		},
+		
+	},
+	"2":
+		{
+			"command_name": "dialogue_command",
+			"data":
+				{
+					"name": "me",
+					"dialogue":
+						"good lord...",
+					"expression": "",
+					"next": "3",
+				},
+		},
+	"3":
+		{
+			"command_name": "stuff_command",
+			"data":
+				{
+					"name": "me",
+					"dialogue":
+						"good lord...",
+					"expression": "",
+					"next": "5",
+				},
+		}
+}

@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://2by8cq5v1562"]
+
+[ext_resource type="Script" uid="uid://bxsv2djmk82rw" path="res://system/scene/base_game_scene.gd" id="1_mg4q8"]
+[ext_resource type="Script" uid="uid://7g16upl4p5dd" path="res://system/scene/object_list.gd" id="2_ddnu8"]
+[ext_resource type="Script" uid="uid://bv4f0k3ig41o5" path="res://system/object/base_game_object.gd" id="3_t536d"]
+[ext_resource type="Script" uid="uid://c7dbo6rg0rw52" path="res://system/object/component/interactable_component.gd" id="4_0k6yg"]
+[ext_resource type="JSON" path="res://database/scenes/json_test.json" id="5_lp6gk"]
+
+[node name="base_game_scene" type="Node2D" unique_id=1659559275 node_paths=PackedStringArray("object_list")]
+script = ExtResource("1_mg4q8")
+object_list = NodePath("object_list")
+
+[node name="object_list" type="Node" parent="." unique_id=1006946146]
+script = ExtResource("2_ddnu8")
+
+[node name="object" type="Node" parent="object_list" unique_id=1703575461]
+script = ExtResource("3_t536d")
+metadata/_custom_type_script = "uid://bv4f0k3ig41o5"
+
+[node name="interactable_component" type="Node" parent="object_list/object" unique_id=1013440042]
+script = ExtResource("4_0k6yg")
+_event = ExtResource("5_lp6gk")
+metadata/_custom_type_script = "uid://c7dbo6rg0rw52"
+
+[node name="environment" type="Node" parent="." unique_id=1882305674]
