@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://f8w2p57q6iff"]
+
+[ext_resource type="Script" uid="uid://csssyi2h6va2v" path="res://system/entity/component/player_component/camera_object.gd" id="1_73bgx"]
+
+[node name="CameraComponent" type="Camera2D" unique_id=340118578]
+script = ExtResource("1_73bgx")
+
+[node name="AudioListener2D" type="AudioListener2D" parent="." unique_id=421684561]
+current = true

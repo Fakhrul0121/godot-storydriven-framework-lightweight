@@ -1,1 +1,0 @@
-class_name BaseGameObject extends Node

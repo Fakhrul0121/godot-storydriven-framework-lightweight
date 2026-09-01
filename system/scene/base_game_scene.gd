@@ -1,3 +1,4 @@
 class_name BaseGameScene extends Node2D
 
-@export var object_list: ObjectList
+func _ready() -> void:
+	SceneManager.current_game_scene = self

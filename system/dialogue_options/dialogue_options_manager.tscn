@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://djjgmagi7fr7k"]
+
+[ext_resource type="Script" uid="uid://bsruawedmbgyf" path="res://system/dialogue_options/dialogue_options_manager.gd" id="1_pc8rl"]
+[ext_resource type="Script" uid="uid://o8vnmr6ug80v" path="res://system/dialogue_options/managers/character_bust_manager.gd" id="2_afr7e"]
+[ext_resource type="Script" uid="uid://ber6cydds8j2p" path="res://system/dialogue_options/managers/dialogue_manager.gd" id="2_m7j6c"]
+[ext_resource type="Script" uid="uid://csc22cl32mkym" path="res://system/dialogue_options/managers/options_manager.gd" id="3_m7j6c"]
+
+[node name="DialogueOptionManager" type="Node" unique_id=1800518650]
+script = ExtResource("1_pc8rl")
+
+[node name="DialogueOptionsUI" type="Control" parent="." unique_id=1645663757]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CharacterBust" type="TextureRect" parent="DialogueOptionsUI" unique_id=831355628]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -124.0
+offset_right = 102.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_afr7e")
+
+[node name="BackgroundContainer" type="PanelContainer" parent="DialogueOptionsUI" unique_id=1229215418]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -120.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="DialogueContainer" type="MarginContainer" parent="DialogueOptionsUI/BackgroundContainer" unique_id=821835873]
+visible = false
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+script = ExtResource("2_m7j6c")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DialogueOptionsUI/BackgroundContainer/DialogueContainer" unique_id=1064943374]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="CharacterName" type="Label" parent="DialogueOptionsUI/BackgroundContainer/DialogueContainer/VBoxContainer" unique_id=1758622848]
+layout_mode = 2
+text = "Name"
+
+[node name="Dialogue" type="RichTextLabel" parent="DialogueOptionsUI/BackgroundContainer/DialogueContainer/VBoxContainer" unique_id=1058472939]
+layout_mode = 2
+bbcode_enabled = true
+text = "Dialogue dialogue dialogue......
+"
+fit_content = true
+
+[node name="OptionsContainer" type="MarginContainer" parent="DialogueOptionsUI/BackgroundContainer" unique_id=304663535]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+script = ExtResource("3_m7j6c")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DialogueOptionsUI/BackgroundContainer/OptionsContainer" unique_id=1759998478]
+layout_mode = 2
+theme_override_constants/separation = 8

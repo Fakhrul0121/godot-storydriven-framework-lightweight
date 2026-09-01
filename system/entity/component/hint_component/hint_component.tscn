@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://bnj6rtbrpxst6"]
+
+[ext_resource type="Script" uid="uid://di2pyy4u5odbh" path="res://system/entity/component/hint_component/hint_component.gd" id="1_lbxtu"]
+
+[node name="HintComponent" type="Area2D" unique_id=1692804662 node_paths=PackedStringArray("hint_texture")]
+script = ExtResource("1_lbxtu")
+hint_texture = NodePath("HintTexture")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1698620206]
+debug_color = Color(1.1792034e-06, 0.6506877, 0.09615324, 0.41960785)
+
+[node name="HintTexture" type="Sprite2D" parent="." unique_id=347675174]

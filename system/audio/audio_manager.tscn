@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://bcl4774peyn6k"]
+
+[ext_resource type="Script" uid="uid://b1ajwf2d8latr" path="res://system/audio/audio_manager.gd" id="1_b3600"]
+
+[node name="AudioSystem" type="Node" unique_id=1818915136]
+script = ExtResource("1_b3600")
+
+[node name="AudioStreamBGM" type="AudioStreamPlayer" parent="." unique_id=564554859]
+
+[node name="AudioStreamBGS" type="AudioStreamPlayer" parent="." unique_id=1413701706]
+
+[node name="AudioStreamUI" type="AudioStreamPlayer" parent="." unique_id=1197772432]

@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://byahw3yf46e80"]
+
+[node name="MovableEntity" type="CharacterBody2D" unique_id=1127025794]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=483065783]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1711825784]
+rotation = 1.5707964
+debug_color = Color(0, 0, 0, 0.7490196)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=275775120]
+
+[node name="AnimationTree" type="AnimationTree" parent="." unique_id=86418483]
+anim_player = NodePath("../AnimationPlayer")

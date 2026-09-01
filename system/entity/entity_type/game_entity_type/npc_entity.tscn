@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://cq1xnuvci4o0p"]
+
+[ext_resource type="PackedScene" uid="uid://byahw3yf46e80" path="res://system/entity/entity_type/base_entity_type/movable_entity.tscn" id="1_pvn8j"]
+[ext_resource type="PackedScene" uid="uid://bnj6rtbrpxst6" path="res://system/entity/component/hint_component/hint_component.tscn" id="2_j88p2"]
+[ext_resource type="PackedScene" uid="uid://dq2ia5lgdcef4" path="res://system/entity/component/event_trigger_component/event_trigger_component.tscn" id="2_ohe8y"]
+
+[node name="NPCEntity" unique_id=1127025794 instance=ExtResource("1_pvn8j")]
+
+[node name="HintComponent" parent="." index="0" unique_id=1692804662 node_paths=PackedStringArray("event_trigger_component") instance=ExtResource("2_j88p2")]
+event_trigger_component = NodePath("../EventTriggerComponent")
+
+[node name="EventTriggerComponent" parent="." index="1" unique_id=1165339583 instance=ExtResource("2_ohe8y")]
