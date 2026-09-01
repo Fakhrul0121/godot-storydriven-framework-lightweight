@@ -1,1 +1,1 @@
-class_name CharacterBustManager extends TextureRect
+class_name CharacterPotraitManager extends TextureRect

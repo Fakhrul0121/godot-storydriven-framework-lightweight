@@ -6,7 +6,6 @@ func run_options(options_list: Dictionary[String, String]):
 	for option in options_list:
 		append_option(option, options_list[option])
 	return await option_choosen
-	pass
 	
 func append_option(option_text: String, next_id: String):
 	var option_button = GameOptionButton.new(option_text, next_id)

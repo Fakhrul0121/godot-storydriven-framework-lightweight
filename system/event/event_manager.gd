@@ -20,16 +20,3 @@ func start_event(event: GameEvent):
 		current_event = event
 	await current_event.run_event()
 	is_event_running = false
-
-## Flow control
-
-## If else
-func if_command(data: Dictionary):
-	var result = SystemLibrary.parse_expression(data["expression"])
-	
-	assert(result is bool, "Parse error: the expression does not return boolean.")
-	
-	if result:
-		return data["next_if_true"]
-	else:
-		return data["next_if_false"]

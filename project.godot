@@ -20,11 +20,11 @@ buses/default_bus_layout="uid://dy5cm6mbf7f8y"
 
 [autoload]
 
-DialogueOptionsManager="*uid://bsruawedmbgyf"
+EventManager="*uid://dovfoyr4lak6a"
+DialogueOptionsManager="*uid://djjgmagi7fr7k"
 GlobalVariables="*uid://ckktohr4hjipe"
 InventoryManager="*uid://ckqauw1v2s5du"
 SaveLoadManager="*uid://d2gaqkt0eaax5"
-EventManager="*uid://dovfoyr4lak6a"
 EntityManager="*uid://dtproor2j10yf"
 SceneManager="*uid://dpl5mckwp60bc"
 SystemLibrary="*uid://0socolpu5wyo"

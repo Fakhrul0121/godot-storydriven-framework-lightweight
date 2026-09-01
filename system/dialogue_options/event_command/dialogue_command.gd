@@ -7,4 +7,4 @@ class_name DialogueCommand extends BaseEventCommand
 
 func emit_command() -> String:
 	await DialogueOptionsManager.dialogue_command(character_name, dialogue)
-	return next_id;
+	return next_id
