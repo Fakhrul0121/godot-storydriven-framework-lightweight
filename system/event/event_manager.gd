@@ -20,3 +20,4 @@ func start_event(event: GameEvent):
 		current_event = event
 	await current_event.run_event()
 	is_event_running = false
+	current_event = null
