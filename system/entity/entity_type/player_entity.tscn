@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://qeyr0g2tdx5u"]
+
+[ext_resource type="PackedScene" uid="uid://bwn52rifidf1m" path="res://system/entity/entity_type/base_entity.tscn" id="1_slj6t"]
+[ext_resource type="PackedScene" uid="uid://bx0bg65delfrj" path="res://system/entity/component/body_component/character_body_component.tscn" id="2_yjcp4"]
+[ext_resource type="Script" uid="uid://shxccibvgm0r" path="res://system/entity/component/event_trigger_component/interact_component.gd" id="3_iw1oq"]
+[ext_resource type="PackedScene" uid="uid://cxdc4mf6xg7vy" path="res://system/entity/component/moving_component/moving_component.tscn" id="4_hwvjl"]
+[ext_resource type="PackedScene" uid="uid://wk004dfyp66u" path="res://system/entity/component/player_input_component/player_input_component.tscn" id="5_wv2kw"]
+
+[sub_resource type="Animation" id="Animation_vak0v"]
+
+[sub_resource type="Animation" id="Animation_rsk3i"]
+
+[sub_resource type="Animation" id="Animation_hywht"]
+
+[sub_resource type="Animation" id="Animation_mcsrf"]
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qwfc7"]
+_data = {
+&"down": SubResource("Animation_vak0v"),
+&"left": SubResource("Animation_rsk3i"),
+&"right": SubResource("Animation_hywht"),
+&"up": SubResource("Animation_mcsrf")
+}
+
+[sub_resource type="Animation" id="Animation_nd03x"]
+
+[sub_resource type="Animation" id="Animation_csspk"]
+
+[sub_resource type="Animation" id="Animation_hddn2"]
+
+[sub_resource type="Animation" id="Animation_xsc28"]
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ra6dx"]
+_data = {
+&"down": SubResource("Animation_nd03x"),
+&"left": SubResource("Animation_csspk"),
+&"right": SubResource("Animation_hddn2"),
+&"up": SubResource("Animation_xsc28")
+}
+
+[sub_resource type="Animation" id="Animation_0rusi"]
+
+[sub_resource type="Animation" id="Animation_ocymw"]
+
+[sub_resource type="Animation" id="Animation_oicuu"]
+
+[sub_resource type="Animation" id="Animation_8e254"]
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4il6n"]
+_data = {
+&"down": SubResource("Animation_0rusi"),
+&"left": SubResource("Animation_ocymw"),
+&"right": SubResource("Animation_oicuu"),
+&"up": SubResource("Animation_8e254")
+}
+
+[node name="PlayerEntity" unique_id=218600860 instance=ExtResource("1_slj6t")]
+
+[node name="CharacterBodyComponent" parent="." index="0" unique_id=1508534887 instance=ExtResource("2_yjcp4")]
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBodyComponent" index="1" unique_id=2044858305]
+
+[node name="RayCast2D" type="RayCast2D" parent="CharacterBodyComponent" index="2" unique_id=1350048294]
+script = ExtResource("3_iw1oq")
+
+[node name="MovingComponent" parent="." index="1" unique_id=206190382 node_paths=PackedStringArray("animation_player", "movable_entity") instance=ExtResource("4_hwvjl")]
+animation_player = NodePath("../AnimationPlayer")
+movable_entity = NodePath("../CharacterBodyComponent")
+
+[node name="PlayerInputComponent" parent="." index="2" unique_id=1357926875 node_paths=PackedStringArray("moving_component") instance=ExtResource("5_wv2kw")]
+moving_component = NodePath("../MovingComponent")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="3" unique_id=1166667511]
+libraries/idle = SubResource("AnimationLibrary_qwfc7")
+libraries/run = SubResource("AnimationLibrary_ra6dx")
+libraries/walk = SubResource("AnimationLibrary_4il6n")

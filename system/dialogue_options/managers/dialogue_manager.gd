@@ -4,18 +4,16 @@ class_name DialogueManager extends MarginContainer
 @onready var dialogue_textbox = $VBoxContainer/Dialogue
 
 @export var typewriter_timer: float = .5
+@export var autorun_timer_wait: float = 5
 
 var is_typewriting: bool = false
 var is_text_displayed: bool = false
 
 signal is_moving_to_next
 
-func run_dialogue(character_name: String, dialogue: String):
-	character_name_textbox.text = character_name
-	await show_dialogue(dialogue)
-	await is_moving_to_next
-	
-	#if next isn't dialogue then fade out dialogue box
+func _process(delta: float) -> void:
+	if is_text_displayed:
+		wait_to_move_next()
 
 func _input(event: InputEvent) -> void:
 	if is_typewriting:
@@ -24,6 +22,18 @@ func _input(event: InputEvent) -> void:
 	if is_text_displayed:
 		if event.is_action_just_pressed("ui_accept"):
 			move_to_next()
+
+func wait_to_move_next():
+	if EventManager.is_event_autorun:
+		await get_tree().create_timer(autorun_timer_wait).timeout
+		move_to_next()
+	
+
+func run_dialogue(character_name: String, dialogue: String):
+	character_name_textbox.text = character_name
+	await show_dialogue(dialogue)
+	await is_moving_to_next
+	#if next isn't dialogue then fade out dialogue box
 
 func move_to_next():
 	is_moving_to_next.emit()

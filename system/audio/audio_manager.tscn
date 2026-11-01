@@ -6,7 +6,14 @@
 script = ExtResource("1_b3600")
 
 [node name="AudioStreamBGM" type="AudioStreamPlayer" parent="." unique_id=564554859]
+autoplay = true
+bus = &"BGM"
 
 [node name="AudioStreamBGS" type="AudioStreamPlayer" parent="." unique_id=1413701706]
+bus = &"BGS"
 
 [node name="AudioStreamUI" type="AudioStreamPlayer" parent="." unique_id=1197772432]
+bus = &"UI"
+
+[node name="AudioStreamSFX" type="AudioStreamPlayer" parent="." unique_id=1436585279]
+bus = &"SFX"

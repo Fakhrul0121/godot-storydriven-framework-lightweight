@@ -14,4 +14,3 @@ func run_event():
 	while current_id != "0":
 		var current_event_command = event[current_id]
 		current_id = await current_event_command.emit_command()
-	pass

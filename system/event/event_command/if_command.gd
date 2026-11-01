@@ -1,3 +1,4 @@
+@tool
 class_name IfCommand extends BaseEventCommand
 
 @export_custom(PROPERTY_HINT_EXPRESSION, "") var expression: String
@@ -9,6 +10,7 @@ class_name IfCommand extends BaseEventCommand
 func emit_command() -> String:
 	var result = SystemLibrary.parse_expression(expression)
 	
-	assert(result is bool, "Parse error: the expression does not return boolean.")
+	if result is not bool:
+		push_error("Parse error: the expression does not return boolean.")
 	
 	return if_true if result else if_false

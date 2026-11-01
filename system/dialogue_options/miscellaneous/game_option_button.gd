@@ -7,4 +7,5 @@ func _init(option_text: String, next_id: String):
 	self.next_id = next_id
 	alignment = HORIZONTAL_ALIGNMENT_LEFT
 	flat = true
+	action_mode = BaseButton.ACTION_MODE_BUTTON_RELEASE
 	pass

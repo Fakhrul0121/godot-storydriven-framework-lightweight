@@ -24,9 +24,10 @@ EventManager="*uid://dovfoyr4lak6a"
 DialogueOptionsManager="*uid://djjgmagi7fr7k"
 GlobalVariables="*uid://ckktohr4hjipe"
 InventoryManager="*uid://ckqauw1v2s5du"
-SaveLoadManager="*uid://d2gaqkt0eaax5"
 EntityManager="*uid://dtproor2j10yf"
-SceneManager="*uid://dpl5mckwp60bc"
+MapManager="*uid://dpl5mckwp60bc"
+AudioManager="*uid://bcl4774peyn6k"
+SaveLoadManager="*uid://d2gaqkt0eaax5"
 SystemLibrary="*uid://0socolpu5wyo"
 
 [display]
@@ -38,6 +39,11 @@ window/stretch/mode="canvas_items"
 [dotnet]
 
 project/assembly_name="gdscript-RPGM-framework-lightweight"
+
+[global_group]
+
+entity=""
+player=""
 
 [gui]
 
