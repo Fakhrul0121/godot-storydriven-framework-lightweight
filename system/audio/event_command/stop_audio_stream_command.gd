@@ -9,4 +9,5 @@ extends BaseEventCommand
 @export var next_id: String
 
 func emit_command() -> String:
+	AudioManager.stop_audio_stream(audio_type, fade_out_time)
 	return next_id

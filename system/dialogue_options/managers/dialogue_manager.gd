@@ -59,6 +59,6 @@ func parse_variables_in_dialogue(raw_dialogue: String) -> String:
 	var parse_text = raw_dialogue
 	
 	for regex_match: RegExMatch in regex_matches:
-		var result = SystemLibrary.parse_expression(regex_match.get_strings()[1])
+		var result = ManagerLibrary.parse_expression(regex_match.get_strings()[1])
 		parse_text = parse_text.replace(regex_match.get_strings()[0],str(result))
 	return parse_text

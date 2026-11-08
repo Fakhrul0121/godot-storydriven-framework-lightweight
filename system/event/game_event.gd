@@ -11,6 +11,6 @@ class_name GameEvent extends Resource
 var current_id
 
 func run_event():
-	while current_id != "0":
+	while current_id != "0" && current_id != "end":
 		var current_event_command = event[current_id]
 		current_id = await current_event_command.emit_command()

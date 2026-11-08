@@ -9,6 +9,7 @@
 script = ExtResource("1_pc8rl")
 
 [node name="DialogueOptionsUI" type="Control" parent="." unique_id=1645663757]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

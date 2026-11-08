@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="gdscript-RPGM-framework-lightweight"
+run/main_scene="uid://gfap6bhy4hws"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -27,8 +28,9 @@ InventoryManager="*uid://ckqauw1v2s5du"
 EntityManager="*uid://dtproor2j10yf"
 MapManager="*uid://dpl5mckwp60bc"
 AudioManager="*uid://bcl4774peyn6k"
+CameraManager="*uid://ctih5xwmfr1bb"
 SaveLoadManager="*uid://d2gaqkt0eaax5"
-SystemLibrary="*uid://0socolpu5wyo"
+ManagerLibrary="*uid://0socolpu5wyo"
 
 [display]
 

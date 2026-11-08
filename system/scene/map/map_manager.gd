@@ -2,11 +2,28 @@ extends Node
 
 const TILE_SIZE = 48
 
+enum POSITION_TYPE
+{
+	TILE_POSITION,
+	PIXEL_POSITION
+}
+
 var current_game_map: BaseGameMap
 var preload_game_map_array: Array[BaseGameMap]
 
+var get_accurate_position: Dictionary[POSITION_TYPE, Callable] = {
+	POSITION_TYPE.TILE_POSITION: get_pixel_position_from_tile_position,
+	POSITION_TYPE.PIXEL_POSITION: get_pixel_position
+}
+
 func get_pixel_position_from_tile_position(tile_position: Vector2):
 	return (tile_position * TILE_SIZE) + (Vector2(TILE_SIZE, TILE_SIZE)/2)
+
+func get_pixel_position(pixel_position: Vector2):
+	return pixel_position
+
+func get_pixel_position_from_node_position(node: Node2D):
+	return node.position
 
 func get_node_from_current_map(node_path: NodePath):
 	return current_game_map.get_node_or_null(node_path)

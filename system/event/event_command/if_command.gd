@@ -8,7 +8,7 @@ class_name IfCommand extends BaseEventCommand
 @export var if_false: String
 
 func emit_command() -> String:
-	var result = SystemLibrary.parse_expression(expression)
+	var result = ManagerLibrary.parse_expression(expression)
 	
 	if result is not bool:
 		push_error("Parse error: the expression does not return boolean.")

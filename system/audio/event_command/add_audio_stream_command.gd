@@ -19,6 +19,13 @@ extends BaseEventCommand
 
 func _validate_property(property: Dictionary) -> void:
 	#do something here
+	if audio_type == AudioManager.AUDIO_TYPE.SFX:
+		if !is_autoplay:
+			if property.name == "is_wait_until_sfx_finished": property.usage = PROPERTY_USAGE_NO_EDITOR
+	else:
+		is_autoplay = false
+		if property.name == "is_autoplay": property.usage = PROPERTY_USAGE_NO_EDITOR
+		if property.name == "is_wait_until_sfx_finished": property.usage = PROPERTY_USAGE_NO_EDITOR
 	pass
 
 func emit_command() -> String:

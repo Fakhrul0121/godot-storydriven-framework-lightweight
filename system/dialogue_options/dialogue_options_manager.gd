@@ -24,6 +24,15 @@ func dialogue_command(character_name: String, dialogue: String):
 	options_manager.visible = false
 	await dialogue_manager.run_dialogue(character_name, dialogue)
 
+func check_dialogue_box_visibility():
+	if $DialogueOptionsUI.modulate.a >= 0.0:
+		await fade_dialogue_box(true)
+
+func check_next_command(next_id: String):
+	var next_command_type = typeof(EventManager.get_command_event(next_id))
+	if !(next_command_type is DialogueCommand or next_command_type is OptionsCommand or next_command_type is PotraitCommand):
+		await fade_dialogue_box(false)
+
 func fade_dialogue_box(fade_in: bool):
 	var tween = create_tween()
 	tween.tween_property(background_box, "modulate:a", float(fade_in), FADE_TIME)
