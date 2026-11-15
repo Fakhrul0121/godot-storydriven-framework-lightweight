@@ -8,6 +8,7 @@ extends BaseEventCommand
 
 @export var next_id: String
 
+## Shouldn't I just get the audiostream?
 func emit_command() -> String:
 	AudioManager.switch_clip_audio_interactive(audio_type,clip_name)
 	return next_id

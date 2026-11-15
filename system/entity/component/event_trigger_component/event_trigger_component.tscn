@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://dq2ia5lgdcef4"]
 
-[ext_resource type="Script" uid="uid://xkocfk0uxx4u" path="res://system/entity/component/event_trigger_component/event_trigger_component.gd" id="1_4nxyh"]
+[ext_resource type="Script" uid="uid://xkocfk0uxx4u" path="res://system/entity/component/event_trigger_component/event_trigger_component.gd" id="1_trvlg"]
 
 [node name="EventTriggerComponent" type="Area2D" unique_id=1165339583]
-script = ExtResource("1_4nxyh")
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_trvlg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=96054208]

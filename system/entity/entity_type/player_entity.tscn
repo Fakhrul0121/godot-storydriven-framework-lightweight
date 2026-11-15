@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://shxccibvgm0r" path="res://system/entity/component/event_trigger_component/interact_component.gd" id="3_iw1oq"]
 [ext_resource type="PackedScene" uid="uid://cxdc4mf6xg7vy" path="res://system/entity/component/moving_component/moving_component.tscn" id="4_hwvjl"]
 [ext_resource type="PackedScene" uid="uid://wk004dfyp66u" path="res://system/entity/component/player_input_component/player_input_component.tscn" id="5_wv2kw"]
+[ext_resource type="PackedScene" uid="uid://b4sw61clqst1t" path="res://system/entity/component/move_by_command_component/move_by_command_component.tscn" id="6_iw1oq"]
 
 [sub_resource type="Animation" id="Animation_vak0v"]
 
@@ -74,3 +75,6 @@ moving_component = NodePath("../MovingComponent")
 libraries/idle = SubResource("AnimationLibrary_qwfc7")
 libraries/run = SubResource("AnimationLibrary_ra6dx")
 libraries/walk = SubResource("AnimationLibrary_4il6n")
+
+[node name="MoveByCommandComponent" parent="." index="4" unique_id=182828621 node_paths=PackedStringArray("moving_component") instance=ExtResource("6_iw1oq")]
+moving_component = NodePath("../MovingComponent")

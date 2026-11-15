@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://buhhifljek52b"]
+
+[ext_resource type="Script" uid="uid://shxccibvgm0r" path="res://system/entity/component/event_trigger_component/interact_component.gd" id="1_qjmbv"]
+
+[node name="InteractComponent" type="RayCast2D" unique_id=710763667]
+collision_mask = 2
+collide_with_areas = true
+script = ExtResource("1_qjmbv")

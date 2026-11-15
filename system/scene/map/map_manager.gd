@@ -25,10 +25,10 @@ func get_pixel_position(pixel_position: Vector2):
 func get_pixel_position_from_node_position(node: Node2D):
 	return node.position
 
-func get_node_from_current_map(node_path: NodePath):
+func get_node_from_node_path(node_path: NodePath):
 	return current_game_map.get_node_or_null(node_path)
 
-func map_transition(next_map_name: StringName, transfer_position: Vector2):
+func map_transition(next_map_name: StringName, transfer_to_position: Vector2):
 	
 	## find game map
 	var next_game_map = null

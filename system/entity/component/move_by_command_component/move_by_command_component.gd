@@ -15,7 +15,7 @@ func move_towards(target_position: Vector2, speed: EntityManager.MOVEMENT_SPEED,
 func physics_process_move_entity_body_towards(target_position: Vector2, speed: EntityManager.MOVEMENT_SPEED,animation: String, distance_limit: float):
 	var direction = moving_component.movable_entity.position.direction_to(target_position)
 	while moving_component.movable_entity.position.distance_to(target_position) >= distance_limit:
-		moving_component.move_entity(direction, speed, animation)
 		await get_tree().physics_frame
+		moving_component.move_entity(direction, speed, animation)
 	moving_finished.emit()
 	is_moving = false
